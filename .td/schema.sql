@@ -1,5 +1,6 @@
 
 -- http_online1 object definition
+-- http_online1 object definition
 CREATE FOREIGN TABLE http_online1, EXTERNAL SECURITY DEFINER TRUSTED "tio" (
   location varchar(2048) character set unicode casespecific,
   htimestamp varchar(25),
@@ -21,4 +22,4 @@ CREATE FOREIGN TABLE http_online1, EXTERNAL SECURITY DEFINER TRUSTED "tio" (
  ) USING (
   LOCATION('/S3/s3.us-west-1.amazonaws.com/tio-antares-nos-uswest1/dpi/')
   STOREDAS('PARQUET')
- );
+ )
